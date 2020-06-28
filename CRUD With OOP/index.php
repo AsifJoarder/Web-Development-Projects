@@ -80,19 +80,19 @@
                 <form method="POST">
                     <div class="form-group">
                         <label for="">Full Name</label>
-                        <input name='name' type="text" class="form-control">
+                        <input onmouseenter="typeWritername()" name='name' type="text" class="form-control" id="1">
                     </div>
                     <div class="form-group">
                         <label for="">User Name</label>
-                        <input name='uname' type="text" class="form-control">
+                        <input onmouseenter="typeWriteruname()" name='uname' type="text" class="form-control" id="2">
                     </div>
                     <div class="form-group">
                         <label for="">Email Address</label>
-                        <input name='email' type="email" class="form-control">
+                        <input onmouseenter="typeWriteremail()" name='email' type="email" class="form-control" id="3">
                     </div>
                     <div class="form-group">
                         <label for="">Cell</label>
-                        <input name='cell' type="number" class="form-control">
+                        <input onmouseenter="typeWritercell()" name='cell' type="number" class="form-control" id="4">
                     </div>
                     <div class="form-group text-right mt-4">
 						<input name="submit" class="btn btn-primary" type="submit" value="Sign Up">
@@ -111,5 +111,61 @@
     <script src="asset/js/popper.min.js"></script>
     <script src="asset/js/bootstrap.min.js"></script>
     <script src="asset/js/script.js"></script>
+    <script>
+        
+       
+            
+            let n = 0;
+            let un=0;
+            let em=0;
+            let c=0;
+        function typeWritername() {
+            
+            let txt = 'e.g. Asif Hoosain Joarder'
+            if(n < txt.length) {
+            document.getElementById("1").placeholder += txt.charAt(n);
+            n++;
+            setTimeout(typeWritername, 70);
+            }   
+        }
+
+         function typeWriteruname() {
+            
+            let txt = 'e.g. AsifHJ23'
+            if(un < txt.length) {
+            document.getElementById("2").placeholder += txt.charAt(un);
+            un++;
+            setTimeout(typeWriteruname, 70);
+            }  
+        }
+
+         function typeWriteremail() {
+            
+            let txt = 'e.g. asifhossainjoarder23@gmail.com'
+            if(em < txt.length) {
+            document.getElementById("3").placeholder += txt.charAt(em);
+            em++;
+            setTimeout(typeWriteremail, 70);
+            }
+        }
+
+        function typeWritercell() {
+            
+            let txt = 'e.g. 01792155323'
+            if(c < txt.length) {
+            document.getElementById("4").placeholder += txt.charAt(c);
+            c++;
+            setTimeout(typeWritercell, 70);
+            }
+        }
+
+
+
+
+
+
+
+        
+    </script>
 </body>
 </html>
